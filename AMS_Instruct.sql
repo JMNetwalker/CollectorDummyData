@@ -1,0 +1,2 @@
+﻿PerformanceVarcharNVarchar,Id,TextToSearch
+PerformanceVarcharNVarchar2,TextToSearch
