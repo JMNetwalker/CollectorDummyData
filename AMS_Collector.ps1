@@ -10,7 +10,7 @@ param($server = "", #ServerName parameter to connect
       $user = "", #UserName parameter  to connect
       $passwordSecure = "", #Password Parameter  to connect
       $Db = "", #DBName Parameter  to connect
-      $Folder = "c:\AMS_Export") #Folder Paramater to save the csv files 
+      $Folder = "C:\AMS_Export") #Folder Paramater to save the csv files 
 
 
 #----------------------------------------------------------------
@@ -334,7 +334,7 @@ for ($iQuery=0; $iQuery -lt $query.Count; $iQuery++)
    $DataReturned = $SqlAdapter.Fill($DataSet)
    $Table = Remove-InvalidFileNameChars($Table)
    $FileBCP = $sFolderV + "AMS_" + $Table + ".CSV"
-   $DataReturned = $DataSet.Tables[0] | Export-Csv $FileBCP -NoTypeInformation -Encoding UTF8
+   $DataReturned = $DataSet.Tables[0] | Export-Csv $FileBCP -NoTypeInformation -Encoding Unicode
    logMsg("Exporting the data.." + $Table + "-" + $SQL + " file " + $FileBCP) (1)
   } 
    logMsg("Closing the connection..") (1)
